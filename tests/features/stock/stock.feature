@@ -1,7 +1,6 @@
 #language:pt
 
-@test
-Funcionalidade: Manipular estoque de produtos
+Funcionalidade: Manipular API de produtos
 
   Esquema do Cenario: Adicionar um produto inválido 
     Dado que eu tenho uma base de dados vazia
@@ -11,7 +10,7 @@ Funcionalidade: Manipular estoque de produtos
     Exemplos:
     | Campo |
     | Name  |
-    # | Type  |
+    | Type  |
 
   Cenario: Adicionar um produto
     Dado que eu tenho uma base de dados vazia

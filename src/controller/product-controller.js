@@ -8,7 +8,6 @@ class ProductController {
             return res.status(200).json(data);
         }).catch(err => {
             if (err.errors.type || err.errors.name) {
-                console.log(err.errors);
                 return res.status(400).send("Campo obrigatório");
             }
             return res.status(500).send("Erro desconheçido, contate o administrador");
@@ -33,7 +32,7 @@ class ProductController {
         let body = req.body;
         return Product.findByIdAndUpdate(id, body, {new: true}).then(data => {
             return res.status(200).json(data);
-        }).catch(err => console.log(err));
+        }).catch(err => res.sendStatus(500));
     }
 
     deleteProductById(req, res) {
@@ -44,7 +43,7 @@ class ProductController {
     }
 
     deleteAll(req, res) {
-        return Product.deleteMany().then(() => res.sendStatus(200)).catch(err => console.log(err));
+        return Product.deleteMany().then(() => res.sendStatus(200)).catch(err => res.sendStatus(500));
     }
 }
 

@@ -1,0 +1,491 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "manipular-api-de-produtos;adicionar-um-produto-inválido",
+        "keyword": "Esquema do Cenario",
+        "line": 5,
+        "name": "Adicionar um produto inválido",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 6,
+            "name": "que eu tenho uma base de dados vazia",
+            "match": {
+              "location": "tests\\specs\\stock.specs.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 45000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 7,
+            "name": "eu criar um produto com o campo Name vazio",
+            "match": {
+              "location": "tests\\specs\\stock.specs.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 82000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 8,
+            "name": "a mensagem \"Campo obrigatório\" será exibida",
+            "match": {
+              "location": "tests\\specs\\stock.specs.js:164"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 9,
+            "name": "o código \"400\" será exibido",
+            "match": {
+              "location": "tests\\specs\\stock.specs.js:180"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "manipular-api-de-produtos;adicionar-um-produto-inválido",
+        "keyword": "Esquema do Cenario",
+        "line": 5,
+        "name": "Adicionar um produto inválido",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 6,
+            "name": "que eu tenho uma base de dados vazia",
+            "match": {
+              "location": "tests\\specs\\stock.specs.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 7,
+            "name": "eu criar um produto com o campo Type vazio",
+            "match": {
+              "location": "tests\\specs\\stock.specs.js:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 8,
+            "name": "a mensagem \"Campo obrigatório\" será exibida",
+            "match": {
+              "location": "tests\\specs\\stock.specs.js:164"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 9,
+            "name": "o código \"400\" será exibido",
+            "match": {
+              "location": "tests\\specs\\stock.specs.js:180"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "manipular-api-de-produtos;adicionar-um-produto",
+        "keyword": "Cenario",
+        "line": 15,
+        "name": "Adicionar um produto",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 16,
+            "name": "que eu tenho uma base de dados vazia",
+            "match": {
+              "location": "tests\\specs\\stock.specs.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 17,
+            "name": "eu criar um produto com campos válido",
+            "match": {
+              "location": "tests\\specs\\stock.specs.js:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1638000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 18,
+            "name": "o produto será criado",
+            "match": {
+              "location": "tests\\specs\\stock.specs.js:72"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 133000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 19,
+            "name": "o código \"200\" será exibido",
+            "match": {
+              "location": "tests\\specs\\stock.specs.js:180"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "manipular-api-de-produtos;buscar-todos-os-produtos",
+        "keyword": "Cenario",
+        "line": 21,
+        "name": "Buscar todos os produtos",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 22,
+            "name": "que eu tenho uma base de dados não vazia",
+            "match": {
+              "location": "tests\\specs\\stock.specs.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 132000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 23,
+            "name": "eu realizar uma busca sem filtros nos produtos",
+            "match": {
+              "location": "tests\\specs\\stock.specs.js:85"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 120000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 24,
+            "name": "vai ser retornado todos os produtos existentes",
+            "match": {
+              "location": "tests\\specs\\stock.specs.js:150"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 25,
+            "name": "o código \"200\" será exibido",
+            "match": {
+              "location": "tests\\specs\\stock.specs.js:180"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "manipular-api-de-produtos;buscar-um-produto-por-id",
+        "keyword": "Cenario",
+        "line": 27,
+        "name": "Buscar um produto por id",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 28,
+            "name": "que eu tenho uma base de dados não vazia",
+            "match": {
+              "location": "tests\\specs\\stock.specs.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 131000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 29,
+            "name": "eu buscar um produto com id válido e existente",
+            "match": {
+              "location": "tests\\specs\\stock.specs.js:95"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 122000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 30,
+            "name": "vai ser retornado o produto com id indicado",
+            "match": {
+              "location": "tests\\specs\\stock.specs.js:168"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 119000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 31,
+            "name": "o código \"200\" será exibido",
+            "match": {
+              "location": "tests\\specs\\stock.specs.js:180"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "manipular-api-de-produtos;buscar-um-produto-por-id-inexistente",
+        "keyword": "Cenario",
+        "line": 33,
+        "name": "Buscar um produto por id inexistente",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 34,
+            "name": "eu buscar um produto com id inexistente ou inválido",
+            "match": {
+              "location": "tests\\specs\\stock.specs.js:105"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 35,
+            "name": "o código \"500\" será exibido",
+            "match": {
+              "location": "tests\\specs\\stock.specs.js:180"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "manipular-api-de-produtos;editar-um-produto-por-id",
+        "keyword": "Cenario",
+        "line": 37,
+        "name": "Editar um produto por id",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 38,
+            "name": "que eu tenho uma base de dados não vazia",
+            "match": {
+              "location": "tests\\specs\\stock.specs.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 134000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 39,
+            "name": "eu editar um produto com id válido e existente",
+            "match": {
+              "location": "tests\\specs\\stock.specs.js:114"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 131000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 40,
+            "name": "o produto com aquele id vai ser editado",
+            "match": {
+              "location": "tests\\specs\\stock.specs.js:138"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 119000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 41,
+            "name": "o código \"200\" será exibido",
+            "match": {
+              "location": "tests\\specs\\stock.specs.js:180"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "manipular-api-de-produtos;excluir-um-produto-por-id",
+        "keyword": "Cenario",
+        "line": 43,
+        "name": "Excluir um produto por id",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 44,
+            "name": "que eu tenho uma base de dados não vazia",
+            "match": {
+              "location": "tests\\specs\\stock.specs.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 129000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 45,
+            "name": "eu excluir um produto com id válido e existente",
+            "match": {
+              "location": "tests\\specs\\stock.specs.js:129"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 124000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 46,
+            "name": "o produto com aquele id vai ser excluido",
+            "match": {
+              "location": "tests\\specs\\stock.specs.js:154"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 118000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 47,
+            "name": "o código \"200\" será exibido",
+            "match": {
+              "location": "tests\\specs\\stock.specs.js:180"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "manipular-api-de-produtos",
+    "line": 3,
+    "keyword": "Funcionalidade",
+    "name": "Manipular API de produtos",
+    "tags": [],
+    "uri": "tests\\features\\stock\\stock.feature"
+  }
+]
