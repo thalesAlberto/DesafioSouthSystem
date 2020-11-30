@@ -1,40 +1,48 @@
 #language:pt
 
+@test
 Funcionalidade: Manipular estoque de produtos
 
-  Cenario: Adicionar um produto inválido ao estoque
-    Dado que eu tenho um estoque vazio
-    Quando eu adicionar um produto inválido ao estoque
-    Então o código de erro "400" será exibido
-    E o produto não será adicionado ao estoque
+  Esquema do Cenario: Adicionar um produto inválido 
+    Dado que eu tenho uma base de dados vazia
+    Quando eu criar um produto com o campo <Campo> vazio
+    Então a mensagem "Campo obrigatório" será exibida
+    Então o código "400" será exibido
+    Exemplos:
+    | Campo |
+    | Name  |
+    # | Type  |
 
-  Cenario: Adicionar um produto ao estoque
-    Dado que eu tenho um estoque vazio
-    Quando eu adicionar um produto ao estoque
-    Então o estoque deve possuir esse produto
+  Cenario: Adicionar um produto
+    Dado que eu tenho uma base de dados vazia
+    Quando eu criar um produto com campos válido
+    Então o produto será criado
+    E o código "200" será exibido
 
-  Cenario: Buscar todos os produto do estoque
-    Dado que eu tenho um estoque não vazio
-    Quando eu realizar uma busca no estoque
-    Então vai ser retornado todos os itens do estoque
+  Cenario: Buscar todos os produtos
+    Dado que eu tenho uma base de dados não vazia
+    Quando eu realizar uma busca sem filtros nos produtos
+    Então vai ser retornado todos os produtos existentes
+    E o código "200" será exibido
 
-  Cenario: Buscar um produto por id no estoque
-    Dado que eu tenho um estoque não vazio
-    Quando eu buscar um produto do estoque com id "1"
-    Então vai ser retornado o produto do estoque com id indicado
+  Cenario: Buscar um produto por id
+    Dado que eu tenho uma base de dados não vazia
+    Quando eu buscar um produto com id válido e existente
+    Então vai ser retornado o produto com id indicado
+    E o código "200" será exibido
 
-  Cenario: Buscar um produto por id inexistente no estoque
-    Dado que eu tenho um estoque não vazio
-    Quando eu buscar um produto do estoque com id inexistente
-    Então o código de erro "500" será exibido
-    E nenhum produto será retornado
+  Cenario: Buscar um produto por id inexistente
+    Quando eu buscar um produto com id inexistente ou inválido
+    Então o código "500" será exibido
 
-  Cenario: Editar um produto por id no estoque
-    Dado que eu tenho um estoque não vazio
-    Quando eu editar um produto do estoque com id "1"
+  Cenario: Editar um produto por id
+    Dado que eu tenho uma base de dados não vazia
+    Quando eu editar um produto com id válido e existente
     Então o produto com aquele id vai ser editado
+    E o código "200" será exibido
 
-  Cenario: Excluir um produto por id no estoque
-    Dado que eu tenho um estoque não vazio
-    Quando eu excluir um produto do estoque com id "1"
+  Cenario: Excluir um produto por id
+    Dado que eu tenho uma base de dados não vazia
+    Quando eu excluir um produto com id válido e existente
     Então o produto com aquele id vai ser excluido
+    E o código "200" será exibido
